@@ -75,7 +75,9 @@ const Publish = ({ initialData }: PublishProps) => {
     <Popover>
         <PopoverTrigger>
           <Button size="sm" variant="ghost">
-            Публикация {initialData.isPublished && <Globe className='text-sky-500 w-4 h-4 ml-2' />}
+            <p className='sm:block hidden'>Публикация</p> 
+            {initialData.isPublished && <Globe className='text-sky-500 w-4 h-4 sm:ml-2' />}
+            {!initialData.isPublished && <Globe className='sm:hidden w-4 h-4' />}
           </Button>
         </PopoverTrigger>
         <PopoverContent className='w-72' align='end' alignOffset={0} forceMount>

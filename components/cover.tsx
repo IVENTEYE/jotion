@@ -57,8 +57,8 @@ const Cover = ({ url, preview }: CoverImageProps) => {
                     variant="outline"
                     size="sm"
                 >
-                    <ImageIcon className='w-4 h-4 mr-2'/>
-                    Изменить обложку
+                    <ImageIcon className='w-4 h-4 md:mr-2'/>
+                    <p className='md:block hidden'>Изменить обложку</p>
                 </Button>
                 <Button
                     onClick={onRemoveCoverImage}
@@ -66,8 +66,8 @@ const Cover = ({ url, preview }: CoverImageProps) => {
                     variant="outline"
                     size="sm"
                 >
-                    <X className='w-4 h-4 mr-2'/>
-                    Удалить обложку
+                    <X className='w-4 h-4 md:mr-2'/>
+                    <p className='md:block hidden'>Удалить обложку</p>
                 </Button>
             </div>
         )}

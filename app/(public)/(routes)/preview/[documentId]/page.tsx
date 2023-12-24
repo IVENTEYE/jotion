@@ -1,14 +1,13 @@
 "use client";
 
 import Cover from '@/components/cover';
-import Editor from '@/components/editor';
 import Toolbar from '@/components/toolbar';
 import { Skeleton } from '@/components/ui/skeleton';
 import { api } from '@/convex/_generated/api';
 import { Id } from '@/convex/_generated/dataModel';
 import { useMutation, useQuery } from 'convex/react';
 import dynamic from "next/dynamic";
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 
 interface DocumentIdPageProps {
   params: {
@@ -58,11 +57,11 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
       <Cover preview={!document.publicEditable} url={document.coverImage} />
       <div className='md:max-w-3xl lg:max-w-4xl mx-auto'>
         <Toolbar preview={!document.publicEditable} initialData={document} />
-        <Editor
-          editable={document.publicEditable}
-          onChange={onChange}
-          initialContent={document.content}
-        />
+          <Editor
+            editable={document.publicEditable}
+            onChange={onChange}
+            initialContent={document.content}
+          />
       </div>
     </div>
   )
